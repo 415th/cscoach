@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional CS2 coaching | Улучшите свою игру с профессиональным тренером">
-    <meta name="keywords" content="CS2 coach, esports training, counter-strike 2">
-    <title>Elite CS2 Coaching | Professional Counter-Strike 2 Training</title>
+    <meta name="description" content="CS2 coaching from a Global Elite coach | Join our Discord for free resources and exclusive coaching">
+    <meta name="keywords" content="CS2 coach, esports training, counter-strike 2, Discord community">
+    <title>CS2 Elite Coaching | Join Our Discord Community</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">⚡ Elite Coaching</div>
+                <div class="logo">⚡ CS2 Elite</div>
+                <nav class="nav">
+                    <a href="#reviews" class="nav-link" data-en="Success Stories" data-ru="Истории Успеха">Success Stories</a>
+                    <a href="#learn" class="nav-link" data-en="What You Learn" data-ru="Чему Вы Научитесь">What You Learn</a>
+                    <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="nav-cta" data-en="Join Discord →" data-ru="Присоединиться →">Join Discord →</a>
+                </nav>
                 <div class="lang-switcher">
                     <button class="lang-btn active" onclick="switchLanguage('en', this)">EN</button>
                     <button class="lang-btn" onclick="switchLanguage('ru', this)">РУ</button>
@@ -26,181 +31,192 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title" data-en="Reach Your Peak in CS2" data-ru="Достигните пика в CS2">Reach Your Peak in CS2</h1>
-            <p class="hero-subtitle" data-en="Professional personalized coaching to improve your game, ranking, and competitive skills." data-ru="Профессиональный персональный коучинг для улучшения вашей игры и повышения рейтинга.">Professional personalized coaching to improve your game, ranking, and competitive skills.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-num">500+</span>
-                    <span data-en="Players Trained" data-ru="Игроков обучено">Players Trained</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">4.9★</span>
-                    <span data-en="Rating" data-ru="Рейтинг">Rating</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">10+</span>
-                    <span data-en="Years" data-ru="Лет">Years</span>
-                </div>
+            <div class="hero-content">
+                <div class="hero-badge" data-en="⚡ Lightning's Coaching - 4000 Elo FACEIT" data-ru="⚡ Коучинг Lightning - 4000 Elo FACEIT">⚡ Lightning's Coaching - 4000 Elo FACEIT</div>
+                <h1 class="hero-title" data-en="You're One Good Coach Away" data-ru="Вы в один хороший коучинг сессии">You're One Good Coach Away</h1>
+                <p class="hero-subtitle" data-en="From rank breakthrough. Learn strategies & mechanics from a Global Elite coach. Free Discord with daily tips." data-ru="От прорыва в рейтинге. Изучайте стратегии и механику от тренера Global Elite. Бесплатный Discord с ежедневными советами.">From rank breakthrough. Learn strategies & mechanics from a Global Elite coach. Free Discord with daily tips.</p>
+                <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="btn-primary" data-en="Join Discord Free" data-ru="Присоединиться Бесплатно">Join Discord Free</a>
+                <p class="cta-subtext" data-en="No credit card needed • Instant access to community" data-ru="Карта не требуется • Мгновенный доступ">No credit card needed • Instant access to community</p>
             </div>
-            <button class="btn-primary" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'})">
-                <span data-en="Book Now" data-ru="Забронировать">Book Now</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 data-en="Training Packages" data-ru="Пакеты обучения">Training Packages</h2>
-            <div class="packages">
-                <div class="package">
-                    <h3 data-en="Single Session" data-ru="Одна сессия">Single Session</h3>
-                    <div class="price">$45<span>/hour</span></div>
-                    <ul>
-                        <li data-en="60 min one-on-one coaching" data-ru="60 мин индивидуального коучинга">60 min one-on-one coaching</li>
-                        <li data-en="VOD review" data-ru="Разбор VOD">VOD review</li>
-                        <li data-en="Discord access" data-ru="Доступ Discord">Discord access</li>
-                    </ul>
+            <div class="hero-highlights">
+                <div class="highlight-item">
+                    <span class="number" data-en="1000+" data-ru="1000+">1000+</span>
+                    <span class="label" data-en="Students" data-ru="Студентов">Students</span>
                 </div>
-                <div class="package featured">
-                    <div class="badge" data-en="Best Value" data-ru="Лучшее предложение">Best Value</div>
-                    <h3 data-en="Training Package" data-ru="Пакет обучения">Training Package</h3>
-                    <div class="price">$199<span>/4 sessions</span></div>
-                    <ul>
-                        <li data-en="4 sessions" data-ru="4 сессии">4 sessions</li>
-                        <li data-en="Progress tracking" data-ru="Отслеживание прогресса">Progress tracking</li>
-                        <li data-en="Unlimited Discord support" data-ru="Неограниченная поддержка Discord">Unlimited Discord support</li>
-                        <li data-en="Custom training plan" data-ru="Пользовательский план обучения">Custom training plan</li>
-                    </ul>
+                <div class="highlight-item">
+                    <span class="number" data-en="4000 Elo" data-ru="4000 Elo">4000 Elo</span>
+                    <span class="label" data-en="FACEIT Rank" data-ru="Рейтинг FACEIT">FACEIT Rank</span>
                 </div>
-                <div class="package">
-                    <h3 data-en="Premium Coaching" data-ru="Премиум коучинг">Premium Coaching</h3>
-                    <div class="price">$449<span>/month</span></div>
-                    <ul>
-                        <li data-en="8 sessions per month" data-ru="8 сессий в месяц">8 sessions per month</li>
-                        <li data-en="Priority scheduling" data-ru="Приоритетное планирование">Priority scheduling</li>
-                        <li data-en="Weekly VOD reviews" data-ru="Еженедельный разбор VOD">Weekly VOD reviews</li>
-                        <li data-en="24/7 Discord support" data-ru="Круглосуточная поддержка Discord">24/7 Discord support</li>
-                    </ul>
+                <div class="highlight-item">
+                    <span class="number" data-en="5 Yrs" data-ru="5 Лет">5 Yrs</span>
+                    <span class="label" data-en="Coaching" data-ru="Коучинг">Coaching</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Section -->
-    <section class="why-choose">
+    <!-- Reviews Early -->
+    <section id="reviews" class="reviews-section">
         <div class="container">
-            <h2 data-en="What You'll Get" data-ru="Что вы получите">What You'll Get</h2>
-            <div class="benefits-grid">
-                <div class="benefit">
-                    <div class="icon">🎯</div>
-                    <h3 data-en="Improved Aim" data-ru="Улучшенная точность">Improved Aim</h3>
-                    <p data-en="Master crosshair placement and spray control" data-ru="Овладейте наведением и контролем отдачи">Master crosshair placement and spray control</p>
+            <h2 data-en="Student Success Stories" data-ru="Истории Успеха Студентов">Student Success Stories</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="&quot;Lightning taught me spray control patterns I never understood before. Went from 2500 to 3500 Elo in 4 months. Changed my entire game.&quot;" data-ru="&quot;Lightning научил меня паттернам спрея, которые я никогда не понимал. Поднялся с 2500 до 3500 Elo за 4 месяца.&quot;">"Lightning taught me spray control patterns I never understood before. Went from 2500 to 3500 Elo in 4 months. Changed my entire game."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name" data-en="ProPlayer_RU" data-ru="ProPlayer_RU">ProPlayer_RU</div>
+                        <div class="reviewer-rank" data-en="3500 Elo" data-ru="3500 Elo">3500 Elo</div>
+                    </div>
                 </div>
-                <div class="benefit">
-                    <div class="icon">🧠</div>
-                    <h3 data-en="Game Sense" data-ru="Гейм-сенс">Game Sense</h3>
-                    <p data-en="Learn positioning and map control" data-ru="Научитесь позиционированию и контролю карты">Learn positioning and map control</p>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="&quot;His Discord community is insane. Real pro-level advice every day. It's like having a pro teammate reviewing my demos 24/7.&quot;" data-ru="&quot;Его сообщество Discord невероятное. Реальные профессиональные советы каждый день. Это как иметь про-товарища, разбирающего твои демо.&quot;">"His Discord community is insane. Real pro-level advice every day. It's like having a pro teammate reviewing my demos 24/7."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name" data-en="CompFan92" data-ru="CompFan92">CompFan92</div>
+                        <div class="reviewer-rank" data-en="3200 Elo" data-ru="3200 Elo">3200 Elo</div>
+                    </div>
                 </div>
-                <div class="benefit">
-                    <div class="icon">⚡</div>
-                    <h3 data-en="Rank Progression" data-ru="Прогрессия рейтинга">Rank Progression</h3>
-                    <p data-en="Consistent improvement and rank advancement" data-ru="Постоянное улучшение и рост рейтинга">Consistent improvement and rank advancement</p>
-                </div>
-                <div class="benefit">
-                    <div class="icon">📈</div>
-                    <h3 data-en="Decision Making" data-ru="Принятие решений">Decision Making</h3>
-                    <p data-en="Develop critical thinking in high-pressure moments" data-ru="Развивайте критическое мышление">Develop critical thinking in high-pressure moments</p>
-                </div>
-                <div class="benefit">
-                    <div class="icon">👥</div>
-                    <h3 data-en="Team Play" data-ru="Командная игра">Team Play</h3>
-                    <p data-en="Master coordination and communication" data-ru="Мастерство координации и коммуникации">Master coordination and communication</p>
-                </div>
-                <div class="benefit">
-                    <div class="icon">🔄</div>
-                    <h3 data-en="Personalized Plan" data-ru="Персональный план">Personalized Plan</h3>
-                    <p data-en="Tailored to your goals and playstyle" data-ru="Адаптировано под ваши цели">Tailored to your goals and playstyle</p>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="&quot;Lightning actually played vs Vitality—he knows what separates pros from everyone else. Best investment for competitive CS2. Highly recommend.&quot;" data-ru="&quot;Lightning действительно играл против Vitality—он знает, что отличает профессионалов. Лучшие инвестиции для CS2.&quot;">"Lightning actually played vs Vitality—he knows what separates pros from everyone else. Best investment for competitive CS2. Highly recommend."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name" data-en="EsportsAP" data-ru="EsportsAP">EsportsAP</div>
+                        <div class="reviewer-rank" data-en="2800 Elo→3600" data-ru="2800→3600">2800 Elo→3600</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- What You Learn -->
+    <section id="learn" class="learn-section">
         <div class="container">
-            <h2 data-en="Client Reviews" data-ru="Отзывы клиентов">Client Reviews</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p data-en="Went from Silver 2 to Master Guardian in 3 months! The coaching was incredible." data-ru="Поднялся с Silver 2 до Master Guardian за 3 месяца! Коучинг был невероятным.">Went from Silver 2 to Master Guardian in 3 months! The coaching was incredible.</p>
-                    <div class="author">Alex Kovac</div>
+            <h2 data-en="What You'll Learn" data-ru="Чему Вы Научитесь">What You'll Learn</h2>
+            <p class="section-subtitle" data-en="Master the fundamentals that separate pros from casuals" data-ru="Овладейте основами, которые отличают профессионалов">Master the fundamentals that separate pros from casuals</p>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 data-en="Spray Control & Recoil Mastery" data-ru="Контроль Спрея и Отдачи">Spray Control & Recoil Mastery</h3>
+                    <p data-en="Learn every spray pattern, crosshair placement, and muscle memory techniques pro players use daily." data-ru="Изучите все паттерны спрея и технику мышечной памяти.">Learn every spray pattern, crosshair placement, and muscle memory techniques pro players use daily.</p>
                 </div>
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p data-en="The best investment I made for my gaming. Professional and patient coach!" data-ru="Лучшие инвестиции в мою игру. Профессиональный и терпеливый тренер!">The best investment I made for my gaming. Professional and patient coach!</p>
-                    <div class="author">Maria Petrov</div>
+                <div class="learning-card">
+                    <div class="card-icon">🧠</div>
+                    <h3 data-en="Map Control & Positioning" data-ru="Контроль Карты и Позиционирование">Map Control & Positioning</h3>
+                    <p data-en="Understand proper positioning, off-angles, and how to hold sites like professional players." data-ru="Понимание правильного позиционирования и удержания площадок как профессионалы.">Understand proper positioning, off-angles, and how to hold sites like professional players.</p>
                 </div>
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p data-en="My team improved dramatically after team coaching sessions. Highly recommend!" data-ru="Моя команда значительно улучшилась после командных сессий.">My team improved dramatically after team coaching sessions. Highly recommend!</p>
-                    <div class="author">David Torres</div>
+                <div class="learning-card">
+                    <div class="card-icon">⚡</div>
+                    <h3 data-en="Decision Making in Rounds" data-ru="Принятие Решений в Раундах">Decision Making in Rounds</h3>
+                    <p data-en="Learn game sense and critical thinking for split-second decisions that win rounds." data-ru="Развивайте гейм-сенс для правильных решений в критические моменты.">Learn game sense and critical thinking for split-second decisions that win rounds.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="card-icon">📈</div>
+                    <h3 data-en="Economy & Buy Strategy" data-ru="Экономика и Стратегия Покупки">Economy & Buy Strategy</h3>
+                    <p data-en="Master money management and optimal buy decisions for every round scenario." data-ru="Овладейте управлением деньгами и оптимальной тактикой покупки.">Master money management and optimal buy decisions for every round scenario.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="card-icon">🔄</div>
+                    <h3 data-en="Utility Usage & Lineups" data-ru="Использование Утилиты и Линии">Utility Usage & Lineups</h3>
+                    <p data-en="Learn advanced smokes, flashes, and utility usage for aggressive and defensive play." data-ru="Изучите продвинутые смоки и использование утилиты.">Learn advanced smokes, flashes, and utility usage for aggressive and defensive play.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="card-icon">👥</div>
+                    <h3 data-en="Team Communication" data-ru="Командная Коммуникация">Team Communication</h3>
+                    <p data-en="Develop effective callouts and team coordination strategies that win matches." data-ru="Развивайте эффективные колауты и командную координацию.">Develop effective callouts and team coordination strategies that win matches.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 data-en="Coaching Options" data-ru="Варианты Коучинга">Coaching Options</h2>
+            <p class="section-subtitle" data-en="Pick what works for you. All include Discord access" data-ru="Выберите то, что подходит вам. Все включают доступ в Discord">Pick what works for you. All include Discord access</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3 data-en="Single Session" data-ru="Одна Сессия">Single Session</h3>
+                        <div class="price-tag">$30</div>
+                        <div class="price-period">/60 min</div>
+                    </div>
+                    <ul class="price-features">
+                        <li data-en="✓ 1-on-1 coaching" data-ru="✓ Индивидуальный коучинг">✓ 1-on-1 coaching</li>
+                        <li data-en="✓ VOD review" data-ru="✓ Разбор VOD">✓ VOD review</li>
+                        <li data-en="✓ Discord access" data-ru="✓ Доступ Discord">✓ Discord access</li>
+                        <li data-en="✓ Fitness discussion" data-ru="✓ Обсуждение плана">✓ Personalized plan</li>
+                    </ul>
+                    <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="btn-pricing" data-en="Book via Discord" data-ru="Забронировать">Book via Discord</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge" data-en="Most Popular" data-ru="Самый Популярный">Most Popular</div>
+                    <div class="price-header">
+                        <h3 data-en="Starter Package" data-ru="Стартовый Пакет">Starter Package</h3>
+                        <div class="price-tag">$99</div>
+                        <div class="price-period">/4 sessions</div>
+                    </div>
+                    <ul class="price-features">
+                        <li data-en="✓ 4 coaching sessions" data-ru="✓ 4 сессии коучинга">✓ 4 coaching sessions</li>
+                        <li data-en="✓ Progress tracking" data-ru="✓ Отслеживание прогресса">✓ Progress tracking</li>
+                        <li data-en="✓ Weekly VOD reviews" data-ru="✓ Еженедельный разбор VOD">✓ Weekly VOD reviews</li>
+                        <li data-en="✓ Priority Discord support" data-ru="✓ Приоритетная поддержка">✓ Priority Discord support</li>
+                        <li data-en="✓ Custom training plan" data-ru="✓ Пользовательский план">✓ Custom training plan</li>
+                    </ul>
+                    <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="btn-pricing" data-en="Start Training" data-ru="Начать Обучение">Start Training</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3 data-en="Premium Tier" data-ru="Премиум Уровень">Premium Tier</h3>
+                        <div class="price-tag">$299</div>
+                        <div class="price-period">/month</div>
+                    </div>
+                    <ul class="price-features">
+                        <li data-en="✓ 8 coaching sessions/mo" data-ru="✓ 8 сессий в месяц">✓ 8 coaching sessions/mo</li>
+                        <li data-en="✓ Twice-weekly VOD reviews" data-ru="✓ Разбор VOD дважды в неделю">✓ Twice-weekly VOD reviews</li>
+                        <li data-en="✓ 24/7 Discord access" data-ru="✓ 24/7 доступ Discord">✓ 24/7 Discord access</li>
+                        <li data-en="✓ Strategy consultation" data-ru="✓ Консультация стратегии">✓ Strategy consultation</li>
+                        <li data-en="✓ Priority scheduling" data-ru="✓ Приоритетное планирование">✓ Priority scheduling</li>
+                    </ul>
+                    <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="btn-pricing" data-en="Go Premium" data-ru="Премиум">Go Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-en="Ready to Rank Up?" data-ru="Готов к Повышению Рейтинга?">Ready to Rank Up?</h2>
+            <p data-en="Join 500+ players improving their game right now" data-ru="Присоединитесь к 500+ игрокам, которые улучшают свою игру прямо сейчас">Join 500+ players improving their game right now</p>
+            <a href="https://discord.gg/bPZGfSuREE" target="_blank" class="btn-primary btn-large" data-en="Join Discord Community" data-ru="Присоединиться к Сообществу">Join Discord Community</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about-section">
         <div class="container">
-            <h2 data-en="About the Coach" data-ru="О тренере">About the Coach</h2>
+            <h2 data-en="Your Coach - Vitaliy (Lightning)" data-ru="Ваш Тренер - Виталий (Lightning)">Your Coach - Vitaliy (Lightning)</h2>
             <div class="about-content">
-                <p data-en="Hi! I'm a professional CS2 coach with 10+ years of competitive FPS experience. I've trained over 500 players from all skill levels." data-ru="Привет! Я профессиональный тренер CS2 с 10+ годами конкурентного опыта. Я обучил более 500 игроков всех уровней навыков.">Hi! I'm a professional CS2 coach with 10+ years of competitive FPS experience. I've trained over 500 players from all skill levels.</p>
-                <div class="credentials">
-                    <div class="cred">
-                        <strong data-en="Peak Rank" data-ru="Пиковый рейтинг">Peak Rank:</strong> Global Elite / Rank S
-                    </div>
-                    <div class="cred">
-                        <strong data-en="Success Rate" data-ru="Процент успеха">Success Rate:</strong> 92% <span data-en="achieve their goals" data-ru="достигают своих целей">achieve their goals</span>
-                    </div>
-                    <div class="cred">
-                        <strong data-en="Available" data-ru="Доступен">Available:</strong> 6 PM - 12 AM UTC
-                    </div>
+                <div class="about-text">
+                    <p data-en="I'm Vitaliy, known as Lightning in the competitive scene. A 4000 Elo FACEIT player who's competed at the highest level—including memorable matches against Vitality, one of the world's best teams." data-ru="Я Виталий, известный как Lightning. Игрок с рейтингом 4000 на FACEIT, конкурировавший на высочайшем уровне, включая матчи против команды Vitality.">I'm Vitaliy, known as Lightning in the competitive scene. A 4000 Elo FACEIT player who's competed at the highest level—including memorable matches against Vitality, one of the world's best teams.</p>
+                    <p data-en="With 5 years of dedicated coaching experience and over 1000 students trained, I've helped players at every skill level reach their peak. I focus on practical, game-changing coaching—no fluff, just results." data-ru="За 5 лет коучинга я обучил более 1000 студентов. Я сосредоточен на практическом коучинге, который дает результаты—только механика, стратегия и ментальная игра.">With 5 years of dedicated coaching experience and over 1000 students trained, I've helped players at every skill level reach their peak. I focus on practical, game-changing coaching—no fluff, just results.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 data-en="Get Started" data-ru="Начните сейчас">Get Started</h2>
-            <div class="contact-content">
-                <form id="contactForm" class="contact-form">
-                    <input type="text" class="form-input" placeholder="Name" required>
-                    <input type="email" class="form-input" placeholder="Email" required>
-                    <input type="text" class="form-input" placeholder="Discord ID (optional)">
-                    <select class="form-input" required>
-                        <option value="">-- Select Package --</option>
-                        <option value="single">Single Session - $45</option>
-                        <option value="package">Training Package - $199</option>
-                        <option value="premium">Premium Coaching - $449</option>
-                    </select>
-                    <button type="submit" class="btn-submit" data-en="Send Inquiry" data-ru="Отправить запрос">Send Inquiry</button>
-                </form>
-
-                <div class="contact-info">
-                    <div class="info-item">
-                        <strong>💬 Discord:</strong> CoachElite#1337
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-value" data-en="4000 Elo FACEIT" data-ru="4000 Elo FACEIT">4000 Elo FACEIT</div>
+                        <div class="stat-title" data-en="Competitive Level" data-ru="Уровень Конкуренции">Competitive Level</div>
                     </div>
-                    <div class="info-item">
-                        <strong>✉️ Email:</strong> coach@elitecoaching.pro
+                    <div class="stat-box">
+                        <div class="stat-value" data-en="1000+" data-ru="1000+">1000+</div>
+                        <div class="stat-title" data-en="Students Trained" data-ru="Обучено Студентов">Students Trained</div>
                     </div>
-                    <div class="info-item">
-                        <strong>🎮 Steam:</strong> Elite_Coach_CS2
+                    <div class="stat-box">
+                        <div class="stat-value" data-en="5 Years" data-ru="5 Лет">5 Years</div>
+                        <div class="stat-title" data-en="Coaching Experience" data-ru="Опыт Коучинга">Coaching Experience</div>
                     </div>
-                    <div class="info-item">
-                        <strong>🕐 Available:</strong> 6 PM - 12 AM UTC
+                    <div class="stat-box">
+                        <div class="stat-value" data-en="Pro Matches" data-ru="Про Матчи">Pro Matches</div>
+                        <div class="stat-title" data-en="vs Vitality etc." data-ru="против Vitality и др.">vs Vitality etc.</div>
                     </div>
                 </div>
             </div>
@@ -210,7 +226,24 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p data-en="© 2025 Elite CS2 Coaching. All rights reserved." data-ru="© 2025 Elite CS2 Coaching. Все права защищены.">© 2025 Elite CS2 Coaching. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-ru="Быстрые Ссылки">Quick Links</h4>
+                    <a href="https://discord.gg/bPZGfSuREE" target="_blank" data-en="Discord" data-ru="Discord">Discord</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Coach" data-ru="Тренер">Coach</h4>
+                    <p data-en="Name: Vitaliy (Lightning)" data-ru="Имя: Виталий (Lightning)">Vitaliy (Lightning)</p>
+                    <p>4000 Elo FACEIT</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Available" data-ru="Доступен">Available</h4>
+                    <p data-en="6 PM - 12 AM UTC" data-ru="18:00 - 00:00 UTC">6 PM - 12 AM UTC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2025 CS2 Elite Coaching. All rights reserved." data-ru="© 2025 CS2 Elite Coaching. Все права защищены.">© 2025 CS2 Elite Coaching. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
