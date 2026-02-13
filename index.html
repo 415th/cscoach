@@ -4,412 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional CS2 coaching | Улучшите свою игру с профессиональным тренером">
-    <meta name="keywords" content="CS2 coach, esports training, counter-strike 2, coaching, тренер CS2, киберспорт">
-    <meta name="og:title" content="Elite CS2 Coaching | Professional Counter-Strike 2 Training">
-    <meta name="og:description" content="Level up your game with personalized CS2 coaching from a pro player">
-    <title>Elite CS2 Coaching | Pro Counter-Strike 2 Training</title>
+    <meta name="keywords" content="CS2 coach, esports training, counter-strike 2">
+    <title>Elite CS2 Coaching | Professional Counter-Strike 2 Training</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Header -->
+    <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-content">
-                    <div class="logo">
-                        <span class="logo-icon">⚡</span>
-                        <span class="logo-text" data-en="Elite Coaching">Elite Coaching</span>
-                    </div>
-                    
-                    <button class="menu-toggle" id="menuToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <div class="nav-links" id="navLinks">
-                        <a href="#services" data-en="Services">Services</a>
-                        <a href="#testimonials" data-en="Reviews">Reviews</a>
-                        <a href="#about" data-en="About">About</a>
-                        <a href="#contact" data-en="Contact">Contact</a>
-                    </div>
-
-                    <div class="lang-switcher">
-                        <button class="lang-btn active" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="ru">РУ</button>
-                    </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚡ Elite Coaching</div>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('ru')">РУ</button>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-en="Reach Your Peak in CS2">Reach Your Peak in CS2</h1>
-                <p class="hero-subtitle" data-en="Professional personalized coaching from a dedicated CS2 trainer. Improve mechanics, positioning, game sense, and win more games.">Professional personalized coaching from a dedicated CS2 trainer. Improve mechanics, positioning, game sense, and win more games.</p>
-                
-                <div class="hero-cta">
-                    <button class="btn btn-primary" data-en="Book Your Session">Book Your Session</button>
-                    <button class="btn btn-secondary" data-en="Learn More">Learn More</button>
+            <h1 class="hero-title" data-en="Reach Your Peak in CS2" data-ru="Достигните пика в CS2">Reach Your Peak in CS2</h1>
+            <p class="hero-subtitle" data-en="Professional personalized coaching to improve your game, ranking, and competitive skills." data-ru="Профессиональный персональный коучинг для улучшения вашей игры и повышения рейтинга.">Professional personalized coaching to improve your game, ranking, and competitive skills.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">500+</span>
+                    <span data-en="Players Trained" data-ru="Игроков обучено">Players Trained</span>
                 </div>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label" data-en="Players Trained">Players Trained</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">4.9★</span>
-                        <span class="stat-label" data-en="Average Rating">Average Rating</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label" data-en="Years Experience">Years Experience</span>
-                    </div>
+                <div class="stat">
+                    <span class="stat-num">4.9★</span>
+                    <span data-en="Rating" data-ru="Рейтинг">Rating</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">10+</span>
+                    <span data-en="Years" data-ru="Лет">Years</span>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <span>CS2</span>
-                    </div>
+            <button class="btn-primary" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'})">
+                <span data-en="Book Now" data-ru="Забронировать">Book Now</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 data-en="Training Packages" data-ru="Пакеты обучения">Training Packages</h2>
+            <div class="packages">
+                <div class="package">
+                    <h3 data-en="Single Session" data-ru="Одна сессия">Single Session</h3>
+                    <div class="price">$45<span>/hour</span></div>
+                    <ul>
+                        <li data-en="60 min one-on-one coaching" data-ru="60 мин индивидуального коучинга">60 min one-on-one coaching</li>
+                        <li data-en="VOD review" data-ru="Разбор VOD">VOD review</li>
+                        <li data-en="Discord access" data-ru="Доступ Discord">Discord access</li>
+                    </ul>
+                </div>
+                <div class="package featured">
+                    <div class="badge" data-en="Best Value" data-ru="Лучшее предложение">Best Value</div>
+                    <h3 data-en="Training Package" data-ru="Пакет обучения">Training Package</h3>
+                    <div class="price">$199<span>/4 sessions</span></div>
+                    <ul>
+                        <li data-en="4 sessions" data-ru="4 сессии">4 sessions</li>
+                        <li data-en="Progress tracking" data-ru="Отслеживание прогресса">Progress tracking</li>
+                        <li data-en="Unlimited Discord support" data-ru="Неограниченная поддержка Discord">Unlimited Discord support</li>
+                        <li data-en="Custom training plan" data-ru="Пользовательский план обучения">Custom training plan</li>
+                    </ul>
+                </div>
+                <div class="package">
+                    <h3 data-en="Premium Coaching" data-ru="Премиум коучинг">Premium Coaching</h3>
+                    <div class="price">$449<span>/month</span></div>
+                    <ul>
+                        <li data-en="8 sessions per month" data-ru="8 сессий в месяц">8 sessions per month</li>
+                        <li data-en="Priority scheduling" data-ru="Приоритетное планирование">Priority scheduling</li>
+                        <li data-en="Weekly VOD reviews" data-ru="Еженедельный разбор VOD">Weekly VOD reviews</li>
+                        <li data-en="24/7 Discord support" data-ru="Круглосуточная поддержка Discord">24/7 Discord support</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
+    <!-- Why Choose Section -->
+    <section class="why-choose">
         <div class="container">
-            <h2 class="section-title" data-en="What You'll Achieve">What You'll Achieve</h2>
-            
+            <h2 data-en="What You'll Get" data-ru="Что вы получите">What You'll Get</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3 data-en="Improved Aim">Improved Aim</h3>
-                    <p data-en="Personalized drills to enhance your crosshair placement, spray control, and reaction time.">Personalized drills to enhance your crosshair placement, spray control, and reaction time.</p>
+                <div class="benefit">
+                    <div class="icon">🎯</div>
+                    <h3 data-en="Improved Aim" data-ru="Улучшенная точность">Improved Aim</h3>
+                    <p data-en="Master crosshair placement and spray control" data-ru="Овладейте наведением и контролем отдачи">Master crosshair placement and spray control</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">🧠</div>
-                    <h3 data-en="Game Sense">Game Sense</h3>
-                    <p data-en="Learn positioning, map control, economy management, and anti-strategie tactics.">Learn positioning, map control, economy management, and anti-strategie tactics.</p>
+                <div class="benefit">
+                    <div class="icon">🧠</div>
+                    <h3 data-en="Game Sense" data-ru="Гейм-сенс">Game Sense</h3>
+                    <p data-en="Learn positioning and map control" data-ru="Научитесь позиционированию и контролю карты">Learn positioning and map control</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3 data-en="Decision Making">Decision Making</h3>
-                    <p data-en="Develop critical thinking in high-pressure moments with real-game scenario analysis.">Develop critical thinking in high-pressure moments with real-game scenario analysis.</p>
+                <div class="benefit">
+                    <div class="icon">⚡</div>
+                    <h3 data-en="Rank Progression" data-ru="Прогрессия рейтинга">Rank Progression</h3>
+                    <p data-en="Consistent improvement and rank advancement" data-ru="Постоянное улучшение и рост рейтинга">Consistent improvement and rank advancement</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3 data-en="Rank Progression">Rank Progression</h3>
-                    <p data-en="Structured training leading to consistent rank advancement and competitive improvement.">Structured training leading to consistent rank advancement and competitive improvement.</p>
+                <div class="benefit">
+                    <div class="icon">📈</div>
+                    <h3 data-en="Decision Making" data-ru="Принятие решений">Decision Making</h3>
+                    <p data-en="Develop critical thinking in high-pressure moments" data-ru="Развивайте критическое мышление">Develop critical thinking in high-pressure moments</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">👥</div>
-                    <h3 data-en="Team Coordination">Team Coordination</h3>
-                    <p data-en="Master team tactics, call-outs, and how to lead your team to victory.">Master team tactics, call-outs, and how to lead your team to victory.</p>
+                <div class="benefit">
+                    <div class="icon">👥</div>
+                    <h3 data-en="Team Play" data-ru="Командная игра">Team Play</h3>
+                    <p data-en="Master coordination and communication" data-ru="Мастерство координации и коммуникации">Master coordination and communication</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔄</div>
-                    <h3 data-en="Consistent Progress">Consistent Progress</h3>
-                    <p data-en="Receive personalized feedback and structured improvement plans for ongoing advancement.">Receive personalized feedback and structured improvement plans for ongoing advancement.</p>
+                <div class="benefit">
+                    <div class="icon">🔄</div>
+                    <h3 data-en="Personalized Plan" data-ru="Персональный план">Personalized Plan</h3>
+                    <p data-en="Tailored to your goals and playstyle" data-ru="Адаптировано под ваши цели">Tailored to your goals and playstyle</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services / Pricing Section -->
-    <section class="services" id="services">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title" data-en="Training Packages">Training Packages</h2>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="price-badge" data-en="Popular">Popular</div>
-                    <h3 data-en="Single Session">Single Session</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">45</span>
-                        <span class="period">/hour</span>
-                    </div>
-                    <ul class="features">
-                        <li data-en="✓ 60 min one-on-one coaching">✓ 60 min one-on-one coaching</li>
-                        <li data-en="✓ VOD review (if provided)">✓ VOD review (if provided)</li>
-                        <li data-en="✓ Personalized exercises">✓ Personalized exercises</li>
-                        <li data-en="✓ Discord access">✓ Discord access</li>
-                    </ul>
-                    <button class="btn btn-primary" data-en="Book Now">Book Now</button>
+            <h2 data-en="Client Reviews" data-ru="Отзывы клиентов">Client Reviews</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="Went from Silver 2 to Master Guardian in 3 months! The coaching was incredible." data-ru="Поднялся с Silver 2 до Master Guardian за 3 месяца! Коучинг был невероятным.">Went from Silver 2 to Master Guardian in 3 months! The coaching was incredible.</p>
+                    <div class="author">Alex Kovac</div>
                 </div>
-
-                <div class="pricing-card featured">
-                    <div class="price-badge" data-en="Best Value">Best Value</div>
-                    <h3 data-en="Training Package">Training Package</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">199</span>
-                        <span class="period">/4 sessions</span>
-                    </div>
-                    <ul class="features">
-                        <li data-en="✓ 4 × 60 min sessions">✓ 4 × 60 min sessions</li>
-                        <li data-en="✓ Progress tracking">✓ Progress tracking</li>
-                        <li data-en="✓ Unlimited Discord support">✓ Unlimited Discord support</li>
-                        <li data-en="✓ Custom training plan">✓ Custom training plan</li>
-                        <li data-en="✓ VOD analyses">✓ VOD analyses</li>
-                    </ul>
-                    <button class="btn btn-primary" data-en="Start Training">Start Training</button>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="The best investment I made for my gaming. Professional and patient coach!" data-ru="Лучшие инвестиции в мою игру. Профессиональный и терпеливый тренер!">The best investment I made for my gaming. Professional and patient coach!</p>
+                    <div class="author">Maria Petrov</div>
                 </div>
-
-                <div class="pricing-card">
-                    <div class="price-badge" data-en="Elite">Elite</div>
-                    <h3 data-en="Premium Coaching">Premium Coaching</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">449</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="features">
-                        <li data-en="✓ 8 sessions/month">✓ 8 sessions/month</li>
-                        <li data-en="✓ Priority scheduling">✓ Priority scheduling</li>
-                        <li data-en="✓ Weekly VOD reviews">✓ Weekly VOD reviews</li>
-                        <li data-en="✓ Team consultancy">✓ Team consultancy</li>
-                        <li data-en="✓ 24/7 Discord support">✓ 24/7 Discord support</li>
-                    </ul>
-                    <button class="btn btn-primary" data-en="Contact">Contact</button>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="My team improved dramatically after team coaching sessions. Highly recommend!" data-ru="Моя команда значительно улучшилась после командных сессий.">My team improved dramatically after team coaching sessions. Highly recommend!</p>
+                    <div class="author">David Torres</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process">
+    <!-- About Section -->
+    <section class="about">
         <div class="container">
-            <h2 class="section-title" data-en="How It Works">How It Works</h2>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 data-en="Book & Schedule">Book & Schedule</h3>
-                    <p data-en="Choose your package and schedule a session at your convenience.">Choose your package and schedule a session at your convenience.</p>
-                </div>
-
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 data-en="Assessment">Assessment</h3>
-                    <p data-en="We discuss your goals, current rank, and specific areas for improvement.">We discuss your goals, current rank, and specific areas for improvement.</p>
-                </div>
-
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 data-en="Personalized Training">Personalized Training</h3>
-                    <p data-en="Tailored coaching focused on YOUR needs with exercises and real-game analysis.">Tailored coaching focused on YOUR needs with exercises and real-game analysis.</p>
-                </div>
-
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 data-en="Progress & Advance">Progress & Advance</h3>
-                    <p data-en="Track improvements, adjust strategies, and climb the competitive ladder.">Track improvements, adjust strategies, and climb the competitive ladder.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title" data-en="Student Reviews">Student Reviews</h2>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="Went from Silver 2 to Master Guardian in just 3 months. The coaching transformed how I think about the game. Highly recommend!">"Went from Silver 2 to Master Guardian in just 3 months. The coaching transformed how I think about the game. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div>
-                            <p class="author-name">Alex Kovac</p>
-                            <p class="author-role" data-en="CS2 Player">CS2 Player</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="The coach analyzed my VODs and showed me exactly what I was doing wrong. Best investment for my gaming journey!">"The coach analyzed my VODs and showed me exactly what I was doing wrong. Best investment for my gaming journey!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div>
-                            <p class="author-name">Maria Petrov</p>
-                            <p class="author-role" data-en="Competitive Player">Competitive Player</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="Professional, patient, and incredibly knowledgeable. My team improved dramatically after getting team coaching. Worth every penny!">"Professional, patient, and incredibly knowledgeable. My team improved dramatically after getting team coaching. Worth every penny!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">D</div>
-                        <div>
-                            <p class="author-name">David Torres</p>
-                            <p class="author-role" data-en="Team Captain">Team Captain</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="Amazing experience! The coach is professional and really cares about your progress. My crosshair placement improved in the first session!">"Amazing experience! The coach is professional and really cares about your progress. My crosshair placement improved in the first session!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
-                        <div>
-                            <p class="author-name">James Chen</p>
-                            <p class="author-role" data-en="Esports Enthusiast">Esports Enthusiast</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-controls">
-                <button class="slider-btn prev" id="prevBtn">←</button>
-                <div class="slider-dots" id="sliderDots"></div>
-                <button class="slider-btn next" id="nextBtn">→</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Coach Section -->
-    <section class="about" id="about">
-        <div class="container">
+            <h2 data-en="About the Coach" data-ru="О тренере">About the Coach</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder-about">
-                        <span>Coach</span>
+                <p data-en="Hi! I'm a professional CS2 coach with 10+ years of competitive FPS experience. I've trained over 500 players from all skill levels." data-ru="Привет! Я профессиональный тренер CS2 с 10+ годами конкурентного опыта. Я обучил более 500 игроков всех уровней навыков.">Hi! I'm a professional CS2 coach with 10+ years of competitive FPS experience. I've trained over 500 players from all skill levels.</p>
+                <div class="credentials">
+                    <div class="cred">
+                        <strong data-en="Peak Rank" data-ru="Пиковый рейтинг">Peak Rank:</strong> Global Elite / Rank S
                     </div>
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title" data-en="About Your Coach">About Your Coach</h2>
-                    
-                    <p data-en="Hi! I'm a professional CS2 coach with 10+ years of FPS gaming experience and 5+ years of dedicated coaching. I've trained over 500 players, from complete beginners to aspiring competitive professionals.">Hi! I'm a professional CS2 coach with 10+ years of FPS gaming experience and 5+ years of dedicated coaching. I've trained over 500 players, from complete beginners to aspiring competitive professionals.</p>
-                    
-                    <p data-en="My approach is data-driven and focused on YOUR goals. I analyze your gameplay, identify weaknesses, and create personalized improvement plans. Whether you're aiming for a higher rank or competitive success, I can help you get there.">My approach is data-driven and focused on YOUR goals. I analyze your gameplay, identify weaknesses, and create personalized improvement plans. Whether you're aiming for a higher rank or competitive success, I can help you get there.</p>
-
-                    <div class="credentials">
-                        <div class="credential">
-                            <span class="credential-label" data-en="Peak Ranking">Peak Ranking</span>
-                            <span class="credential-value">Global Elite / Rank S</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-label" data-en="Experience">Experience</span>
-                            <span class="credential-value">10+ years competitive FPS</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-label" data-en="Students Trained">Students Trained</span>
-                            <span class="credential-value">500+ players</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-label" data-en="Success Rate">Success Rate</span>
-                            <span class="credential-value">92% achieve goals</span>
-                        </div>
+                    <div class="cred">
+                        <strong data-en="Success Rate" data-ru="Процент успеха">Success Rate:</strong> 92% <span data-en="achieve their goals" data-ru="достигают своих целей">achieve their goals</span>
+                    </div>
+                    <div class="cred">
+                        <strong data-en="Available" data-ru="Доступен">Available:</strong> 6 PM - 12 AM UTC
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Booking Section -->
-    <section class="contact" id="contact">
+    <!-- Contact Section -->
+    <section class="contact">
         <div class="container">
-            <h2 class="section-title" data-en="Ready to Level Up?">Ready to Level Up?</h2>
-            
-            <div class="contact-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <h3 data-en="Get in Touch">Get in Touch</h3>
-                    
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="" required>
-                        <label for="name" data-en="Your Name">Your Name</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="" required>
-                        <label for="email" data-en="Email Address">Email Address</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="discord" placeholder="">
-                        <label for="discord" data-en="Discord ID (optional)">Discord ID (optional)</label>
-                    </div>
-
-                    <div class="form-group">
-                        <select id="package" required>
-                            <option value="">Select a package</option>
-                            <option value="single" data-en="Single Session">Single Session - $45</option>
-                            <option value="package" data-en="Training Package">Training Package - $199</option>
-                            <option value="premium" data-en="Premium Coaching">Premium Coaching - $449</option>
-                        </select>
-                        <label for="package" data-en="Select Package">Select Package</label>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea id="message" rows="4" placeholder=""></textarea>
-                        <label for="message" data-en="Message (optional)">Message (optional)</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" data-en="Send Inquiry">Send Inquiry</button>
+            <h2 data-en="Get Started" data-ru="Начните сейчас">Get Started</h2>
+            <div class="contact-content">
+                <form id="contactForm" class="contact-form">
+                    <input type="text" class="form-input" placeholder="Name" required>
+                    <input type="email" class="form-input" placeholder="Email" required>
+                    <input type="text" class="form-input" placeholder="Discord ID (optional)">
+                    <select class="form-input" required>
+                        <option value="">-- Select Package --</option>
+                        <option value="single">Single Session - $45</option>
+                        <option value="package">Training Package - $199</option>
+                        <option value="premium">Premium Coaching - $449</option>
+                    </select>
+                    <button type="submit" class="btn-submit" data-en="Send Inquiry" data-ru="Отправить запрос">Send Inquiry</button>
                 </form>
 
                 <div class="contact-info">
-                    <h3 data-en="Contact Information">Contact Information</h3>
-                    
                     <div class="info-item">
-                        <span class="info-icon">💬</span>
-                        <div>
-                            <p class="info-label" data-en="Discord">Discord</p>
-                            <p class="info-value">CoachElite#1337</p>
-                        </div>
+                        <strong>💬 Discord:</strong> CoachElite#1337
                     </div>
-
                     <div class="info-item">
-                        <span class="info-icon">✉️</span>
-                        <div>
-                            <p class="info-label" data-en="Email">Email</p>
-                            <p class="info-value">coach@elitecoaching.pro</p>
-                        </div>
+                        <strong>✉️ Email:</strong> coach@elitecoaching.pro
                     </div>
-
                     <div class="info-item">
-                        <span class="info-icon">🎮</span>
-                        <div>
-                            <p class="info-label" data-en="Steam">Steam</p>
-                            <p class="info-value">Elite_Coach_CS2</p>
-                        </div>
+                        <strong>🎮 Steam:</strong> Elite_Coach_CS2
                     </div>
-
                     <div class="info-item">
-                        <span class="info-icon">🕐</span>
-                        <div>
-                            <p class="info-label" data-en="Available">Available</p>
-                            <p class="info-value" data-en="6 PM - 12 AM UTC">6 PM - 12 AM UTC</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" class="social-icon">Twitter</a>
-                        <a href="#" class="social-icon">YouTube</a>
-                        <a href="#" class="social-icon">Twitch</a>
+                        <strong>🕐 Available:</strong> 6 PM - 12 AM UTC
                     </div>
                 </div>
             </div>
@@ -419,143 +210,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Elite Coaching</h4>
-                    <p data-en="Professional CS2 coaching to help you reach your peak.">Professional CS2 coaching to help you reach your peak.</p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-en="Quick Links">Quick Links</h4>
-                    <ul>
-                        <li><a href="#services" data-en="Services">Services</a></li>
-                        <li><a href="#testimonials" data-en="Reviews">Reviews</a></li>
-                        <li><a href="#about" data-en="About">About</a></li>
-                        <li><a href="#contact" data-en="Contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 data-en="Legal">Legal</h4>
-                    <ul>
-                        <li><a href="#" data-en="Privacy Policy">Privacy Policy</a></li>
-                        <li><a href="#" data-en="Terms of Service">Terms of Service</a></li>
-                        <li><a href="#" data-en="Cookie Policy">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-en="© 2025 Elite CS2 Coaching. All rights reserved.">© 2025 Elite CS2 Coaching. All rights reserved.</p>
-            </div>
+            <p data-en="© 2025 Elite CS2 Coaching. All rights reserved." data-ru="© 2025 Elite CS2 Coaching. Все права защищены.">© 2025 Elite CS2 Coaching. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Russian Content Data -->
-    <script>
-        const translations = {
-            ru: {
-                'Reach Your Peak in CS2': 'Достигните пика в CS2',
-                'Professional personalized coaching from a dedicated CS2 trainer. Improve mechanics, positioning, game sense, and win more games.': 'Профессиональный персональный коучинг от опытного тренера CS2. Улучшите мастерство, позиционирование, гейм-сенс и побеждайте.',
-                'Book Your Session': 'Забронировать сессию',
-                'Learn More': 'Узнать больше',
-                'Players Trained': 'Игроков обучено',
-                'Average Rating': 'Средний рейтинг',
-                'Years Experience': 'Лет опыта',
-                'What You\'ll Achieve': 'Чего вы достигнете',
-                'Improved Aim': 'Улучшенная точность',
-                'Personalized drills to enhance your crosshair placement, spray control, and reaction time.': 'Персональные упражнения для улучшения наведения, контроля отдачи и времени реакции.',
-                'Game Sense': 'Гейм-сенс',
-                'Learn positioning, map control, economy management, and anti-strategie tactics.': 'Научитесь позиционированию, контролю карты, управлению экономике и тактикам противодействия.',
-                'Decision Making': 'Принятие решений',
-                'Develop critical thinking in high-pressure moments with real-game scenario analysis.': 'Развивайте критическое мышление в стрессовых ситуациях с анализом реальных сценариев.',
-                'Rank Progression': 'Прогрессия рейтинга',
-                'Structured training leading to consistent rank advancement and competitive improvement.': 'Структурированная подготовка для постоянного роста рейтинга и конкурентного улучшения.',
-                'Team Coordination': 'Координация команды',
-                'Master team tactics, call-outs, and how to lead your team to victory.': 'Овладейте командной тактикой, вызовами и руководством команды к победе.',
-                'Consistent Progress': 'Постоянный прогресс',
-                'Receive personalized feedback and structured improvement plans for ongoing advancement.': 'Получайте персональную обратную связь и структурированные планы улучшения.',
-                'Training Packages': 'Пакеты обучения',
-                'Popular': 'Популярно',
-                'Single Session': 'Одна сессия',
-                '/hour': '/час',
-                '✓ 60 min one-on-one coaching': '✓ 60 мин индивидуального коучинга',
-                '✓ VOD review (if provided)': '✓ Разбор VOD (при наличии)',
-                '✓ Personalized exercises': '✓ Персональные упражнения',
-                '✓ Discord access': '✓ Доступ Discord',
-                'Book Now': 'Забронировать сейчас',
-                'Best Value': 'Лучшее предложение',
-                'Training Package': 'Пакет обучения',
-                '/4 sessions': '/4 сессии',
-                '✓ 4 × 60 min sessions': '✓ 4 × 60 мин сессии',
-                '✓ Progress tracking': '✓ Отслеживание прогресса',
-                '✓ Unlimited Discord support': '✓ Неограниченная поддержка Discord',
-                '✓ Custom training plan': '✓ Пользовательский план обучения',
-                '✓ VOD analyses': '✓ Анализ VOD',
-                'Start Training': 'Начать обучение',
-                'Elite': 'Элитный',
-                'Premium Coaching': 'Премиум коучинг',
-                '/month': '/месяц',
-                '✓ 8 sessions/month': '✓ 8 сессий/месяц',
-                '✓ Priority scheduling': '✓ Приоритетное планирование',
-                '✓ Weekly VOD reviews': '✓ Еженедельный разбор VOD',
-                '✓ Team consultancy': '✓ Консультирование команды',
-                '✓ 24/7 Discord support': '✓ Круглосуточная поддержка Discord',
-                'Contact': 'Контакт',
-                'How It Works': 'Как это работает',
-                'Book & Schedule': 'Забронируйте и назначьте',
-                'Choose your package and schedule a session at your convenience.': 'Выберите пакет и назначьте сессию в удобное для вас время.',
-                'Assessment': 'Оценка',
-                'We discuss your goals, current rank, and specific areas for improvement.': 'Обсудим ваши цели, текущий рейтинг и области для улучшения.',
-                'Personalized Training': 'Персональное обучение',
-                'Tailored coaching focused on YOUR needs with exercises and real-game analysis.': 'Коучинг, адаптированный под ВАШИ потребности, с упражнениями и анализом игры.',
-                'Progress & Advance': 'Прогресс и продвижение',
-                'Track improvements, adjust strategies, and climb the competitive ladder.': 'Отслеживайте улучшения, корректируйте стратегии и поднимайтесь по рейтингу.',
-                'Student Reviews': 'Отзывы студентов',
-                '→': '→',
-                'About Your Coach': 'О вашем тренере',
-                'Hi! I\'m a professional CS2 coach with 10+ years of FPS gaming experience and 5+ years of dedicated coaching. I\'ve trained over 500 players, from complete beginners to aspiring competitive professionals.': 'Привет! Я профессиональный тренер CS2 с 10+ годами опыта в FPS и 5+ годами коучинга. Я обучил более 500 игроков, от новичков до профессионалов.',
-                'My approach is data-driven and focused on YOUR goals. I analyze your gameplay, identify weaknesses, and create personalized improvement plans. Whether you\'re aiming for a higher rank or competitive success, I can help you get there.': 'Мой подход основан на данных и сосредоточен на ВАШИХ целях. Я анализирую вашу игру, выявляю слабые стороны и создаю персональные планы улучшения.',
-                'Peak Ranking': 'Пиковый рейтинг',
-                'Global Elite / Rank S': 'Global Elite / Rank S',
-                'Experience': 'Опыт',
-                '10+ years competitive FPS': '10+ лет конкурентной FPS',
-                'Students Trained': 'Обученных студентов',
-                '500+ players': '500+ игроков',
-                'Success Rate': 'Процент успеха',
-                '92% achieve goals': '92% достигают целей',
-                'Ready to Level Up?': 'Готовы улучшиться?',
-                'Get in Touch': 'Свяжитесь с нами',
-                'Your Name': 'Ваше имя',
-                'Email Address': 'Email адрес',
-                'Discord ID (optional)': 'Discord ID (опционально)',
-                'Select a package': 'Выберите пакет',
-                'Single Session - $45': 'Одна сессия - $45',
-                'Training Package - $199': 'Пакет обучения - $199',
-                'Premium Coaching - $449': 'Премиум коучинг - $449',
-                'Select Package': 'Выберите пакет',
-                'Message (optional)': 'Сообщение (опционально)',
-                'Send Inquiry': 'Отправить запрос',
-                'Contact Information': 'Информация для контакта',
-                'Discord': 'Discord',
-                'Email': 'Email',
-                'Steam': 'Steam',
-                'Available': 'Доступен',
-                '6 PM - 12 AM UTC': '6 вечера - 12 ночи UTC',
-                'Services': 'Услуги',
-                'Reviews': 'Отзывы',
-                'About': 'О нас',
-                'Quick Links': 'Быстрые ссылки',
-                'Legal': 'Юридическое',
-                'Privacy Policy': 'Политика конфиденциальности',
-                'Terms of Service': 'Условия обслуживания',
-                'Cookie Policy': 'Политика файлов cookie',
-                '© 2025 Elite CS2 Coaching. All rights reserved.': '© 2025 Elite CS2 Coaching. Все права защищены.',
-                'CS2 Player': 'Игрок CS2',
-                'Competitive Player': 'Конкурентный игрок',
-                'Team Captain': 'Капитан команды',
-                'Esports Enthusiast': 'Энтузиаст киберспорта',
-                'Professional CS2 coaching to help you reach your peak.': 'Профессиональный коучинг CS2 для достижения вашего пика.',
-            }
-        };
-    </script>
 
     <script src="script.js"></script>
 </body>
