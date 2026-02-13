@@ -1,5 +1,12 @@
-// ============ LANGUAGE SWITCHER ============
-let currentLanguage = localStorage.getItem('language') || 'en';
+// ============ LANGUAGE SWITCHER WITH AUTO-DETECTION ============
+// Auto-detect language based on browser settings
+function detectBrowserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang.startsWith('ru') ? 'ru' : 'en';
+}
+
+// Get language: use saved preference, otherwise detect browser language
+let currentLanguage = localStorage.getItem('language') || detectBrowserLanguage();
 
 function switchLanguage(lang, btn) {
     currentLanguage = lang;
@@ -25,7 +32,7 @@ function switchLanguage(lang, btn) {
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', function() {
-    // Set initial language
+    // Set initial language buttons
     const buttons = document.querySelectorAll('.lang-btn');
     buttons.forEach((btn, index) => {
         if ((currentLanguage === 'en' && index === 0) || (currentLanguage === 'ru' && index === 1)) {
