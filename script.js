@@ -1,20 +1,22 @@
 // ============ LANGUAGE SWITCHER ============
 let currentLanguage = localStorage.getItem('language') || 'en';
 
-function switchLanguage(lang) {
+function switchLanguage(lang, btn) {
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     
     // Update button states
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
+    document.querySelectorAll('.lang-btn').forEach(button => {
+        button.classList.remove('active');
     });
-    event.target.classList.add('active');
+    if (btn) {
+        btn.classList.add('active');
+    }
     
     // Update all text elements
     document.querySelectorAll('[data-en]').forEach(element => {
-        if (lang === 'ru') {
-            element.textContent = element.getAttribute('data-ru') || element.getAttribute('data-en');
+        if (lang === 'ru' && element.getAttribute('data-ru')) {
+            element.textContent = element.getAttribute('data-ru');
         } else {
             element.textContent = element.getAttribute('data-en');
         }
