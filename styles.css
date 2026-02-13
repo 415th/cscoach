@@ -162,23 +162,81 @@ body {
     overflow: hidden;
 }
 
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 93, 0, 0.02) 0px,
+            transparent 2px,
+            transparent 4px,
+            rgba(255, 93, 0, 0.02) 6px
+        ),
+        radial-gradient(circle at 20% 50%, rgba(255, 93, 0, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.radar-corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(255, 93, 0, 0.25);
+    pointer-events: none;
+}
+
+.radar-tl {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.radar-tr {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.radar-bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+
+.radar-br {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
 .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 93, 0, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: 
+        radial-gradient(circle, rgba(255, 93, 0, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    z-index: 0;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto 70px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-badge {
@@ -275,10 +333,16 @@ body {
     gap: 30px;
     margin-top: 80px;
     padding: 50px 0;
-    border-top: 1px solid rgba(255, 93, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 93, 0, 0.1);
+    border-top: 2px solid rgba(255, 93, 0, 0.15);
+    border-bottom: 2px solid rgba(255, 93, 0, 0.15);
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    background: linear-gradient(90deg, 
+        rgba(255, 93, 0, 0.02) 0%, 
+        transparent 20%, 
+        transparent 80%, 
+        rgba(255, 93, 0, 0.02) 100%
+    );
 }
 
 .highlight-item {
@@ -308,6 +372,18 @@ body {
 .reviews-section {
     padding: 100px 0;
     background: linear-gradient(180deg, transparent, rgba(255, 93, 0, 0.02));
+    position: relative;
+}
+
+.reviews-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
 }
 
 .reviews-section h2 {
@@ -317,6 +393,27 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.reviews-section h2::before,
+.reviews-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: var(--primary);
+}
+
+.reviews-section h2::before {
+    left: calc(50% - 260px);
+}
+
+.reviews-section h2::after {
+    right: calc(50% - 260px);
 }
 
 .reviews-grid {
@@ -411,6 +508,27 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.learn-section h2::before,
+.learn-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: var(--primary);
+}
+
+.learn-section h2::before {
+    left: calc(50% - 280px);
+}
+
+.learn-section h2::after {
+    right: calc(50% - 280px);
 }
 
 .section-subtitle {
@@ -437,6 +555,49 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.learning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.learning-card.card-ct {
+    background: linear-gradient(135deg, rgba(100, 180, 255, 0.08), rgba(100, 180, 255, 0.03));
+    border-color: rgba(100, 180, 255, 0.15);
+}
+
+.learning-card.card-ct::before {
+    background: linear-gradient(90deg, #64B4FF, transparent);
+}
+
+.learning-card.card-ct:hover {
+    border-color: #64B4FF;
+    box-shadow: 0 16px 40px rgba(100, 180, 255, 0.15);
+}
+
+.learning-card.card-t {
+    background: linear-gradient(135deg, rgba(255, 120, 80, 0.08), rgba(255, 120, 80, 0.03));
+    border-color: rgba(255, 120, 80, 0.15);
+}
+
+.learning-card.card-t::before {
+    background: linear-gradient(90deg, #FF7850, transparent);
+}
+
+.learning-card.card-t:hover {
+    border-color: #FF7850;
+    box-shadow: 0 16px 40px rgba(255, 120, 80, 0.15);
 }
 
 .learning-card:hover {
@@ -444,6 +605,10 @@ body {
     transform: translateY(-8px);
     box-shadow: 0 16px 40px rgba(255, 93, 0, 0.2);
     background: linear-gradient(135deg, rgba(255, 93, 0, 0.12), rgba(255, 93, 0, 0.06));
+}
+
+.learning-card:hover::before {
+    transform: scaleX(1);
 }
 
 .card-icon {
@@ -481,6 +646,27 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.pricing-section h2::before,
+.pricing-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: var(--primary);
+}
+
+.pricing-section h2::before {
+    left: calc(50% - 300px);
+}
+
+.pricing-section h2::after {
+    right: calc(50% - 300px);
 }
 
 .pricing-grid {
